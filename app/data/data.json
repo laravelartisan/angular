@@ -1,0 +1,16 @@
+[
+  {
+    "name":"igloo",
+    "address":"dhaka",
+    "price":40,
+    "image":"1.jpg"
+
+  },
+  {
+    "name":"poara",
+    "address":"poland",
+    "price":50,
+    "image":"2.jpg"
+
+  }
+]

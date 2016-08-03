@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Crud</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-app="angularCrud" ng-controller="crudController">
+
+
+
+<h1>Hello Angular Crud !!</h1>
+
+<!--<button ng-click="sayHello()">Say Hello</button>-->
+<button ng-click="showMessage = !showMessage">Say Hello</button><br>
+
+<input type="text" name="name" ng-model="addIcream.name">
+<input type="text" name="address" ng-model="addIcream.address">
+<input type="text" name="price" ng-model="addIcream.price">
+<button ng-click="addNew(addIcream)">Add New Item</button>
+
+<br>
+{{ sala }}
+<div ng-show="editItem === true">
+
+    <input type="text" name="name" ng-model="editIcecream.name">
+    <input type="text" name="address" ng-model="editIcecream.address">
+    <input type="text" name="price" ng-model="editIcecream.price">
+
+    <button ng-click="saveChange(editIcecream)">Save Item</button>
+</div>
+<span ng-show="showMessage == true" > Hi Hello</span>
+    <div class="well" ng-repeat="icecream in icecreams">
+        <h3>{{ icecream.name }}</h3>
+        <p><strong>Address: {{ icecream.address}}</strong></p>
+        <p><strong>Price: {{ icecream.price | currency}}</strong></p>
+        <button ng-click="editIcecream(icecream)">Edit Item</button>
+        <!--<img  ng-src="images/{{icecream.image}}" alt="">-->
+    </div>
+
+
+
+</body>
+
+<script src="app/lib/angular/angular.min.js"></script>
+<!--<script src="app/lib/angular/ui-bootstrap.js"></script>-->
+<!--<script src="app/lib/angular/ui-bootstrap-tpls-2.0.0.min.js"></script>-->
+<script src="app/lib/app.js"></script>
+<script src="app/controllers/crudController.js"></script>
+<script src="app/factories/crudFactory.js"></script>
+</html>
